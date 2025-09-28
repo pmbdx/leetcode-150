@@ -1,0 +1,23 @@
+void rotate(int* nums, int numsSize, int k) {
+  int i=0,j=0;
+    int aux;
+    int a;
+    a = k % numsSize;
+    printf("qpd %d %d",k,numsSize);
+    for(i=0;i<a;i++)
+    {
+        aux=*(nums+numsSize-1);
+        for(j=numsSize-1;j>=0;j--)
+        {
+            if(j!=0)
+            {
+            //printf("\n%d,%d ",*(nums+j),*(nums+j-1));
+            *(nums+j)=*(nums+j-1);
+            }
+            else 
+            {
+                *(nums)=aux;
+            }
+        }
+    } 
+}
